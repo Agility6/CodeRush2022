@@ -8,7 +8,9 @@ import positionForm from './modules/position'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    region:""
+  },
   mutations: {},
   actions: {},
   modules: {

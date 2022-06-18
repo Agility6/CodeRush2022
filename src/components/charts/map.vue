@@ -142,7 +142,9 @@ export default {
           path: '/province',
           query: { name }
         })
-        // console.log(params.name)
+        console.log("sss"+params)
+        this.$store.state.region = params.name
+        console.log("被点击的省份"+this.$store.state.region)
       })
     }
   }

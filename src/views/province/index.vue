@@ -4,7 +4,7 @@
       <div class="head-box">
         <!-- 多维度暂无分析 -->
         <radar class="radar box-left" title="多维度分析" @fromSonComp="getFromleida"></radar>
-        <solidPie class="solid-pie box-right" title="职业数据分析" :pie-data="pieData" @fromSonComp="getFromPie"></solidPie>
+        <!-- <solidPie class="solid-pie box-right" title="职业数据分析" :pie-data="pieData" @fromSonComp="getFromPie"></solidPie> -->
       </div>
       <div class="tail-box">
         <point class="point box" title="散点数据" :point-data="pointData" @fromSonComp="getFromPoint"></point>
@@ -150,8 +150,9 @@ export default {
       box-shadow: 3px 3px 5px #c2c2d6;
   }
   .box-left {
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
+      // border-top-left-radius: 20px;
+      // border-bottom-left-radius: 20px;
+      border-radius: 20px;
       box-shadow: 3px 3px 5px #c2c2d6;
   }
   .box-right {
