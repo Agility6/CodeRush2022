@@ -137,14 +137,15 @@ export default {
       this.chartDom.setOption(option)
       // this.$store.dispatch('setChartDOM', [this.mapDom])
       this.chartDom.on('click', (params) => {
+        // console.log(params);
         const { name } = params
         this.$router.push({
           path: '/province',
           query: { name }
         })
-        console.log("sss"+params)
-        this.$store.state.region = params.name
-        console.log("被点击的省份"+this.$store.state.region)
+        // console.log("sss"+params)
+        // this.$store.state.region = params.name
+        // console.log("被点击的省份"+this.$store.state.region)
       })
     }
   }

@@ -72,7 +72,7 @@ export default {
     },
     async _getStandard(region) {
       const res = await getStandard(region)
-      console.log(res.data)
+      // console.log(res.data)
       this.apiNum++
     },
     async _getScatter(region) {
@@ -98,7 +98,10 @@ export default {
         chartDom: chartDom
       }])
     }
-  }
+  },
+  mounted() {
+    console.log(this.$route);
+  },
 }
 </script>
 

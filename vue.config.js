@@ -30,5 +30,6 @@ module.exports = {
         })
       )
     }
-  }
+  },
+  lintOnSave: false
 }
