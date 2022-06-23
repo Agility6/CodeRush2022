@@ -4,7 +4,7 @@
 
 <script>
 import { getDateList, getDateBetween } from '@/utils/date'
-// import mirai from '@/views/components/test-mock/vcl-mock'
+import mirai from '@/views/components/test-mock/vcl-mock'
 import { mapGetters, mapActions } from 'vuex'
 import { getDateListData } from '@/api/mirai'
 

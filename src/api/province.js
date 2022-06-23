@@ -19,13 +19,22 @@ export function getStandard(region) {
     }
   })
 }
-
 export function getScatter(region) {
   return request({
     url: '/getScatter',
     method: 'get',
     params: {
       region
+    }
+  })
+}
+
+export function getAllCityData(province) {
+  return request({
+    url: '../mock/province/gd.json',
+    method: 'get',
+    params:{
+      province:province
     }
   })
 }

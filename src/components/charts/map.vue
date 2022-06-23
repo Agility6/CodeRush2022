@@ -41,6 +41,7 @@ export default {
     mapData: {
       handler() {
         this.data = this.mapData
+        console.log("sssss"+this.data)
         this.initMap()
       }
     }
@@ -66,6 +67,7 @@ export default {
         tooltip: {
           show: true,
           formatter: function(params) {
+            console.log("map=>params:"+JSON.stringify( params))
             return `${params.data.name}： ${params.data.value} 条`
           }
         },
@@ -137,15 +139,11 @@ export default {
       this.chartDom.setOption(option)
       // this.$store.dispatch('setChartDOM', [this.mapDom])
       this.chartDom.on('click', (params) => {
-        // console.log(params);
         const { name } = params
         this.$router.push({
           path: '/province',
           query: { name }
         })
-        // console.log("sss"+params)
-        // this.$store.state.region = params.name
-        // console.log("被点击的省份"+this.$store.state.region)
       })
     }
   }

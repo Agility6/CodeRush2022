@@ -80,25 +80,25 @@ export function getFinanceStage({
   })
 }
 
-export function getPosition({
-  date = '2022-03-04',
-  region = '广东省',
-  level = 2,
-  position = '后端开发',
-  type = 'Month'
-}) {
-  return request({
-    url: '/CountryJob_DayTop_Servlet',
-    method: 'get',
-    params: {
-      date,
-      region,
-      level,
-      position,
-      type
-    }
-  })
-}
+// export function getPosition({
+//   date = '2022-03-04',
+//   region = '广东省',
+//   level = 2,
+//   position = '后端开发',
+//   type = 'Month'
+// }) {
+//   return request({
+//     url: '/CountryJob_DayTop_Servlet',
+//     method: 'get',
+//     params: {
+//       date,
+//       region,
+//       level,
+//       position,
+//       type
+//     }
+//   })
+// }
 
 // ***************************************** Mock Begin *****************************************
 
@@ -173,5 +173,23 @@ export function getPosition({
 //     }
 //   })
 // }
-
+export function getPosition({
+  date = '2022-03-04',
+  region = '广东省',
+  level = 2,
+  position = '后端开发',
+  type = 'Month'
+}) {
+  return request({
+    url: '../mock/mirai-position/position.json',
+    method: 'get',
+    params: {
+      date,
+      region,
+      level,
+      position,
+      type
+    }
+  })
+}
 // ***************************************** Mock End *****************************************
