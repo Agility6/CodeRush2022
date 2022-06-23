@@ -7,7 +7,8 @@
         <!-- <solidPie class="solid-pie box-right" title="职业数据分析" :pie-data="pieData" @fromSonComp="getFromPie"></solidPie> -->
       </div>
       <div class="tail-box">
-        <point class="point box" title="散点数据" :point-data="pointData" @fromSonComp="getFromPoint"></point>
+        <solidPie class="solid-pie box-right " title="职业数据分析" :pie-data="pieData" @fromSonComp="getFromPie"></solidPie>
+        <!-- <point class="point box" title="散点数据" :point-data="pointData" @fromSonComp="getFromPoint"></point> -->
       </div>
     </div>
   </div>
@@ -72,7 +73,7 @@ export default {
     },
     async _getStandard(region) {
       const res = await getStandard(region)
-      // console.log(res.data)
+      console.log(res.data)
       this.apiNum++
     },
     async _getScatter(region) {
@@ -98,10 +99,7 @@ export default {
         chartDom: chartDom
       }])
     }
-  },
-  mounted() {
-    console.log(this.$route);
-  },
+  }
 }
 </script>
 
@@ -130,18 +128,18 @@ export default {
         height: 100%;
         width: 100%;
       }
-      .solid-pie {
-        // flex: 1;
-        background-color: white;
-        height: 100%;
-        width: 100%;
-      }
     }
     .tail-box {
       margin: 15px 0;
-      height: 500px;
+      height: 700px;
       width: 100%;
-      .point {
+      // .point {
+      //   background-color: white;
+      //   height: 100%;
+      //   width: 100%;
+      // }
+      .solid-pie {
+        // flex: 1;
         background-color: white;
         height: 100%;
         width: 100%;
@@ -150,7 +148,7 @@ export default {
   }
   .box {
       border-radius: 20px;
-      box-shadow: 3px 3px 5px #c2c2d6;
+      box-shadow: 3px 3px 5px #9a9ab8;
   }
   .box-left {
       // border-top-left-radius: 20px;
@@ -159,8 +157,9 @@ export default {
       box-shadow: 3px 3px 5px #c2c2d6;
   }
   .box-right {
-      border-top-right-radius: 20px;
-      border-bottom-right-radius: 20px;
+      // border-top-right-radius: 20px;
+      // border-bottom-right-radius: 20px;
+      border-radius: 20px;
       box-shadow: 3px 3px 5px #c2c2d6;
   }
   .box:hover, .box-left:hover, .box-right:hover {

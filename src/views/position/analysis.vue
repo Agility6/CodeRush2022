@@ -172,14 +172,19 @@ export default {
       const { data } = await getPositionHeatmap(form)
       this.heatMapData = data
     },
+    // 企业规模数据请求
     async getCompanySizeData(form = {}) {
       const { data } = await getCompanySize(form)
       this.companySizeData = data
+      console.log("企业规模数据"+JSON.stringify( this.companySizeData))
     },
+    // 学历要求数据请求
     async getEducationData(form = {}) {
       const { data } = await getEducation(form)
       this.educationData = data
+      // console.log("学历要求数据"+JSON.stringify(this.educationData))
     },
+    // 薪资福利数据请求
     async getBenefitData(form = {}) {
       let { data } = await getBenefit(form)
       if (data.length === 0) {
@@ -190,14 +195,19 @@ export default {
         ]
       }
       this.benefitData = data
+      // console.log("薪资福利数据"+JSON.stringify(this.benefitData))
     },
+    // 企业融资数据
     async getFinanceStageData(form = {}) {
       const { data } = await getFinanceStage(form)
       this.financeStage = data
+      // console.log("企业融资数据"+JSON.stringify(this.financeStage))
     },
+    // 岗位多维度分析第一个模块数据
     async getPositionData(form = {}) {
       const { data } = await getPosition(form)
       this.positionData = data
+      // console.log("岗位多维度分析第一个模块数据"+JSON.stringify(this.positionData))
     }
   }
 }
