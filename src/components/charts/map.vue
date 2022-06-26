@@ -41,7 +41,6 @@ export default {
     mapData: {
       handler() {
         this.data = this.mapData
-        console.log("sssss"+this.data)
         this.initMap()
       }
     }
@@ -67,7 +66,6 @@ export default {
         tooltip: {
           show: true,
           formatter: function(params) {
-            console.log("map=>params:"+JSON.stringify( params))
             return `${params.data.name}： ${params.data.value} 条`
           }
         },

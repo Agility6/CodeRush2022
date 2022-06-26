@@ -28,7 +28,6 @@ export default {
         name: 'home-map',
         chartDom: chartDom
       }])
-      // console.log(this.chartDOM)
     },
     async getMapData() {
       const { data } = await getAllProvince()
