@@ -7,7 +7,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    // component: () => import('../views/position/index.vue')
+    // component: () => import('../views/position/index.vue'),
     component: () => import('../views/home/index.vue'),
     meta: {
       title: '全国省份分析'

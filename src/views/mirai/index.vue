@@ -2,7 +2,7 @@
   <div class="view-container">
     <div class="main-index">
       <keep-alive>
-        <!-- <router-view /> -->
+        <router-view />
       </keep-alive>
     </div>
   </div>
